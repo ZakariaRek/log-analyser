@@ -22,7 +22,7 @@ jobs:
     - name: Test script execution
       run: |
         echo "Testing LogAnalyzer script..."
-        python log_analyzer.py
+        python log-analyzer.py
         echo "Script executed successfully!"
     
     - name: Verify output files
