@@ -22,16 +22,16 @@ jobs:
     - name: Test script execution
       run: |
         echo "Testing LogAnalyzer script..."
-        python log_analyzer.py
+        python log-analyser.py
         echo "Script executed successfully!"
     
     - name: Verify output files
       run: |
         echo "Checking output files..."
         ls -la
-        if [ -f "ficher.txt" ]; then
+        if [ -f "rapport.txt" ]; then
           echo "✅ Report file created successfully"
-          cat ficher.txt
+          cat rapport.txt
         else
           echo "❌ Report file not found"
           exit 1
