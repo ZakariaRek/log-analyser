@@ -1,0 +1,38 @@
+name: Test LogAnalyzer
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Test script execution
+      run: |
+        echo "Testing LogAnalyzer script..."
+        python log_analyzer.py
+        echo "Script executed successfully!"
+    
+    - name: Verify output files
+      run: |
+        echo "Checking output files..."
+        ls -la
+        if [ -f "ficher.txt" ]; then
+          echo "✅ Report file created successfully"
+          cat ficher.txt
+        else
+          echo "❌ Report file not found"
+          exit 1
+        fi
