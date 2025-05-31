@@ -1,14 +1,29 @@
-=== RAPPORT D'ANALYSE DES LOGS ===
-Généré le: 2025-05-31 09:27:35
+=== RAPPORT D'ANALYSE DES LOGS - VERSION DEV ===
+Généré le: 2025-05-31 09:52:11
 Fichier analysé: log.txt
 
-STATISTIQUES:
+STATISTIQUES GÉNÉRALES:
 - Total de lignes: 10
 - Erreurs (ERROR): 3
 - Avertissements (WARNING): 3
 - Informations (INFO): 4
+- Debug (DEBUG): 0
 
-RÉPARTITION:
+RÉPARTITION EN POURCENTAGES:
 - ERROR: 30.0%
 - WARNING: 30.0%
 - INFO: 40.0%
+- DEBUG: 0.0%
+
+DÉTAIL DES ERREURS:
+  Ligne 4: 2025-05-31 10:18:22 ERROR - Impossible de se connecter à la base de données
+  Ligne 7: 2025-05-31 10:21:33 ERROR - Timeout lors de l'appel API externe
+  Ligne 9: 2025-05-31 10:23:47 ERROR - Erreur de validation des données utilisateur
+
+DÉTAIL DES AVERTISSEMENTS:
+  Ligne 3: 2025-05-31 10:17:15 WARNING - Tentative de connexion échouée pour user123
+  Ligne 6: 2025-05-31 10:20:10 WARNING - Espace disque faible (85% utilisé)
+  Ligne 10: 2025-05-31 10:24:56 WARNING - Cache Redis non disponible, utilisation du cache local
+
+ANALYSE DE SANTÉ:
+🔴 CRITIQUE: Taux d'erreur élevé (>20%)
